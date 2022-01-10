@@ -34,42 +34,42 @@ def calculate_FLS(cough_inp, fever_inp, breath_inp, age, env_inp, hypertension_i
     Risk_high = IT2FS_Gaussian_UncertMean(severity, [6.5, 2, 1, 1.0])
     Risk_veryhigh = IT2FS_Gaussian_UncertMean(severity, [10.7, 1, 1, 1.0])
 
-    def plot_cough_mf():
-        IT2FS_plot(Cough_neg, Cough_pos,
-                   title="Cough",
-                   legends=["Negative", "Positive"],
-                   )
+    # def plot_cough_mf():
+    #     IT2FS_plot(Cough_neg, Cough_pos,
+    #                title="Cough",
+    #                legends=["Negative", "Positive"],
+    #                )
 
-    def plot_fever_mf():
-        IT2FS_plot(Fever_low, Fever_mod, Fever_high,
-                   title="Fever",
-                   legends=["Low", "Moderate", "High"],
-                   )
+    # def plot_fever_mf():
+    #     IT2FS_plot(Fever_low, Fever_mod, Fever_high,
+    #                title="Fever",
+    #                legends=["Low", "Moderate", "High"],
+    #                )
 
-    def plot_additional_mf():
-        IT2FS_plot(Add_low, Add_high,
-                   title="Additional Risks",
-                   legends=["Low", "High"],
-                   )
+    # def plot_additional_mf():
+    #     IT2FS_plot(Add_low, Add_high,
+    #                title="Additional Risks",
+    #                legends=["Low", "High"],
+    #                )
 
-    def plot_breathdiff_mf():
-        IT2FS_plot(BreathDiff_low, BreathDiff_mod, BreathDiff_extr,
-                   title="Breathing Difficulty",
-                   legends=["Low", "Moderate", "High"],
-                   )
+    # def plot_breathdiff_mf():
+    #     IT2FS_plot(BreathDiff_low, BreathDiff_mod, BreathDiff_extr,
+    #                title="Breathing Difficulty",
+    #                legends=["Low", "Moderate", "High"],
+    #                )
 
-    def plot_risk_mf():
-        IT2FS_plot(Risk_low, Risk_high, Risk_veryhigh,
-                   title="Overall Risk",
-                   legends=["Unlikely", "Likely", "Extremely Likely"],
-                   )
+    # def plot_risk_mf():
+    #     IT2FS_plot(Risk_low, Risk_high, Risk_veryhigh,
+    #                title="Overall Risk",
+    #                legends=["Unlikely", "Likely", "Extremely Likely"],
+    #                )
 
-    plot_fever_mf()
-    plot_cough_mf()
-    plot_breathdiff_mf()
-    plot_additional_mf()
+    # plot_fever_mf()
+    # plot_cough_mf()
+    # plot_breathdiff_mf()
+    # plot_additional_mf()
 
-    plot_risk_mf()
+    # plot_risk_mf()
 
     myIT2FLS = IT2FLS()
 
@@ -115,7 +115,7 @@ def calculate_FLS(cough_inp, fever_inp, breath_inp, age, env_inp, hypertension_i
 
     it2out["risk"].plot(title="Type-2 output MF converted to Type-1")
     TR_plot(severity, tr["risk"])
-    print("Chance of C19 Infection: ", int((crisp(tr["risk"])) * 10), "%")
+    print("Peluang terinfeksi Covid-19 : ", int((crisp(tr["risk"])) * 10), "%")
 
     return int((crisp(tr["risk"])) * 10)
 
