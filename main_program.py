@@ -47,10 +47,10 @@ hyper_box.pack()
 diab_box = Checkbutton(root, text="Apakah anda memiliki diabetes?",
                        variable=diabetes, onvalue=1, offvalue=0)
 diab_box.pack()
-cardio_box = Checkbutton(root, text="Do you have cardiovascular issues?", variable=cardiovascular, onvalue=1,
+cardio_box = Checkbutton(root, text="Apakah anda memiliki Kordiovaskular?", variable=cardiovascular, onvalue=1,
                          offvalue=0)
 cardio_box.pack()
-respi_box = Checkbutton(root, text="Do you have respiratory issues?",
+respi_box = Checkbutton(root, text="Apakah anda memiliki masalah pernafasan?",
                         variable=respiratory, onvalue=1, offvalue=0)
 respi_box.pack()
 immu_box = Checkbutton(root, text="Do you have any Immune deficiency?",
